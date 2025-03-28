@@ -27,7 +27,7 @@
    background:transparent;
    font-size: 16px;
    color: #49557e;
-   border: 1px solid tomato;
+   border: 1px solid #D99E30;
    padding: 10px 30px;
    border-radius: 50px;
    cursor:pointer;
@@ -55,7 +55,7 @@
     position: absolute;
     min-width: 10px;
     min-height: 10px;
-    background-color: tomato;
+    background-color: #D99E30;
     border-radius: 5px;
     top: -8px;
     right: -8px;

@@ -10,18 +10,18 @@ const Header = () => {
   }
 
   return (
-    <div className="header">
-      <div className="header-contents">
-        <h2>Order your favorite beer from here</h2>
-        <p>
-          Choose from a diverse menu featuring a delectable array of dishes
-          crafted with the finest ingredients and culinary expertise. Our
-          mission is to satisfy your cravings and elevate your dining
-          experience, one delicious meal at a time.
-        </p>
-        <button onClick={scrollToMenu}>View Menu</button>
+      <div className="header">
+        <div className="header-contents">
+          <h2>Discover Your Perfect Brew</h2>
+          <p>
+            Explore our wide selection of craft beers, from crisp lagers to bold
+            IPAs. Whether you're a hophead or a stout lover, we’ve got the perfect
+            pour waiting for you. Raise your glass and enjoy the ultimate beer
+            experience!
+          </p>
+          <button onClick={scrollToMenu}>Browse Beers</button>
+        </div>
       </div>
-    </div>
   );
 };
 

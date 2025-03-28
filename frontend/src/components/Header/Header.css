@@ -1,7 +1,7 @@
 .header {
     height: 34vw;
     margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
+    background: url('/beer-background.png') no-repeat;
     background-size: contain;
     position: relative;
 }
@@ -16,22 +16,25 @@
     bottom: 10%;
     left: 6vw;
     animation: fadeIn 2s;
+    background: none;
 }
 
 .header-contents h2 {
     font-weight: 500;
-    color: white;
+    color: #3E2C20;
     font-size: max(4.5vw, 22px);
+    background: none;
 }
 
 .header-contents p {
     color: white;
     font-size: 1.1vw;
+    background: none;
 }
 
 .header-contents button {
     border: none;
-    color: tomato;
+    color: #D99E30;
     font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
@@ -42,7 +45,7 @@
 
 .header-contents button:hover {
     cursor: pointer;
-    background-color: tomato;
+    background-color: #D99E30;
     color: white;
 }
 
