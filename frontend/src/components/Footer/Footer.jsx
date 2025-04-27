@@ -8,12 +8,6 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-content-left">
             <img src={assets.logo} alt="" className="logo" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolorem error eaque cumque corrupti molestiae vero rerum facere ipsa nulla distinctio voluptatum aliquam, accusantium veritatis iste quia nam sapiente vel.</p>
-            <div className="footer-social-icons">
-                <img src={assets.facebook_icon} alt="" />
-                <img src={assets.twitter_icon} alt="" />
-                <img src={assets.linkedin_icon} alt="" />
-            </div>
         </div>
         <div className="footer-content-center">
             <h2>COMPANY</h2>
@@ -29,13 +23,13 @@ const Footer = () => {
             <h2>GET IN TOUCH</h2>
             <ul>
                 <li>Phone number: +1-212-456-7890</li>
-                <li>Email address: contact@tomato.com</li>
+                <li>Email address: office@cap-de-butoi.com</li>
             </ul>
         </div>
       </div>
       <hr />
       <p className="footer-copyright">
-        Copyright &copy; 2025 Tomato. All rights reserved.
+        Copyright &copy; 2025 Cap De Butoi. All rights reserved.
       </p>
     </div>
   );
