@@ -1,12 +1,17 @@
 .navbar{
   padding: 20px 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-   }
+  border-bottom: 2px solid #49557e;
+}
 
-   .navbar.logo{
-    width: 150px;
+.navbar .logo{
+    width: 10%;
+}
+
+.logo img{
+       width: 100%;
 }
 
 .navbar-menu{

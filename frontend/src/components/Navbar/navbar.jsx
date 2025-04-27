@@ -9,7 +9,7 @@ const [menu, setMenu] = useState("home");
 
   return (
     <div className='navbar'>
-      <Link to='/'><img src={assets.logo} alt="" className="logo" /></Link>
+      <Link to='/' className="logo" ><img src={assets.logo} alt="" /></Link>
 
      <ul className="navbar-menu">
         <Link to='/' onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>Home</Link>

@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart } = useContext(StoreContext);
+  const { cartItems, beer_list, removeFromCart } = useContext(StoreContext);
 
   return (
     <div className="cart">
@@ -19,7 +19,7 @@ const Cart = () => {
         </div>
         <br />
         <hr />
-        {food_list.map((item, index) => {
+        {beer_list.map((item, index) => {
           if (cartItems[item._id] > 0) {
             return (
               <div>

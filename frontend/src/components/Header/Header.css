@@ -1,8 +1,9 @@
 .header {
-    height: 34vw;
+    height: 40vw;
     margin: 30px auto;
-    background: url('/beer-background.png') no-repeat;
-    background-size: contain;
+    background: url('/beer_background.png') no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 
@@ -10,18 +11,19 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-end;
+    text-align: end;
     gap: 1.5vw;
-    max-width: 50%;
-    bottom: 10%;
-    left: 6vw;
+    max-width: 40%;
+    bottom: 20%;
+    right: 3vw;
     animation: fadeIn 2s;
     background: none;
 }
 
 .header-contents h2 {
     font-weight: 500;
-    color: #3E2C20;
+    color: white;
     font-size: max(4.5vw, 22px);
     background: none;
 }
