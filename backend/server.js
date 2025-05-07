@@ -2,6 +2,8 @@ import express from "express"
 import cors from "cors"
 import {connectDB} from "./config/db.js";
 import beerRouter from "./routes/beerRoute.js";
+import "dotenv/config";
+import userRouter from "./routes/userRoute.js";
 
 
 const app = express()
@@ -13,6 +15,8 @@ app.use(cors())
 
 connectDB();
 app.use("/api/beer", beerRouter)
+app.use("/images", express.static("uploads"))
+app.use("/api/user", userRouter)
 
 app.get("/", (req, res) =>{
     res.send("API Working")

@@ -6,7 +6,7 @@ import {StoreContext} from "../../context/StoreContext.jsx";
 const Navbar = ({setShowLogin}) => {
 
 const [menu, setMenu] = useState("home");
-const {getTotalCartAmount} = useContext(StoreContext);
+const {cartItems} = useContext(StoreContext);
 
 
   return (
@@ -25,7 +25,7 @@ const {getTotalCartAmount} = useContext(StoreContext);
 
         <div className="navbar-search-icon">
            <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
-            <div className={getTotalCartAmount() ? "dot" : ""}></div>
+            <div className={Object.keys(cartItems).length > 0 ? "dot" : ""}></div>
  
         </div>
         <button onClick={()=>setShowLogin(true)}>sign in</button>

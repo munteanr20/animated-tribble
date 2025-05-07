@@ -1,57 +1,62 @@
-import { createContext, useEffect, useState } from "react";
-import { beer_list } from "../assets/assets";
+import { createContext, useState } from "react";
 
 export const StoreContext = createContext(null);
 
-const StoreContextProvider = (props) => {
+const StoreContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
 
   const addToCart = (itemId) => {
-    if (!cartItems[itemId]) {
-      setCartItems((prev) => ({
-        ...prev,
-        [itemId]: 1,
-      }));
-    } else {
-      setCartItems((prev) => ({
-        ...prev,
-        [itemId]: prev[itemId] + 1,
-      }));
-    }
-  };
-
-  const removeFromCart = (itemId) => {
     setCartItems((prev) => ({
       ...prev,
-      [itemId]: prev[itemId] - 1,
+      [itemId]: (prev[itemId] || 0) + 1,
     }));
   };
 
-  const getTotalCartAmount = () => {
-    let totalAmount = 0;
-    for(const item in cartItems) {
-      if(cartItems[item] > 0) {
-      let itemInfo = beer_list.find((product) =>product._id === item)
-      totalAmount += itemInfo.price*cartItems[item];
+  const removeFromCart = (itemId) => {
+    setCartItems((prev) => {
+      const updated = { ...prev };
+      if (updated[itemId] > 1) {
+        updated[itemId] -= 1;
+      } else {
+        delete updated[itemId];
       }
-    }
-
-    return totalAmount;
-  }
-
-  const contextValue = {
-    beer_list,
-    cartItems,
-    setCartItems,
-    addToCart,
-    removeFromCart,
-    getTotalCartAmount,
+      return updated;
+    });
   };
 
+  const clearCart = () => {
+    setCartItems({});
+  };
+
+  /**
+   * Calculează totalul în funcție de datele reale din backend
+   * @param {Array} beerList - lista berilor din backend
+   */
+  const getTotalCartAmount = (beerList = []) => {
+    let total = 0;
+    for (const id in cartItems) {
+      const item = beerList.find((b) => String(b._id) === String(id));
+      if (item) {
+        total += item.price * cartItems[id];
+      }
+    }
+    return total;
+  };
+
+
   return (
-    <StoreContext.Provider value={contextValue}>
-      {props.children}
-    </StoreContext.Provider>
+      <StoreContext.Provider
+          value={{
+            cartItems,
+            setCartItems,
+            addToCart,
+            removeFromCart,
+            getTotalCartAmount,
+            clearCart,
+          }}
+      >
+        {children}
+      </StoreContext.Provider>
   );
 };
 

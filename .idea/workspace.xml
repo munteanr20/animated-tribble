@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12291932-7984-4a6f-8cbf-24e927cab678" name="Changes" comment="First commit to the new repo" />
+    <list default="true" id="12291932-7984-4a6f-8cbf-24e927cab678" name="Changes" comment="First commit to the new repo">
+      <change afterPath="$PROJECT_DIR$/admin/src/assets/add_icon_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/assets/assets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/assets/basket_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/assets/cross_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/components/Navbar/Navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/components/Navbar/Navbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/components/Sidebar/Sidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/pages/Add/AddBeer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/pages/Add/AddBeer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/pages/List/ListBeer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/pages/List/ListBeers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/pages/Orders/Orders.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/pages/Orders/Orders.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/userModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/userRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/beerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/beerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/beerRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/beerRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FoodDisplay/FoodDisplay.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FoodDisplay/FoodDisplay.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar/navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/context/StoreContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/context/StoreContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Cart/Cart.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
+        <option value="JSX File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -34,8 +67,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/munteanr20/beer-project&quot;,
-    &quot;accountId&quot;: &quot;cc920d72-4095-46cb-87c3-ce351892a283&quot;
+    &quot;url&quot;: &quot;https://github.com/munteanr20/animated-tribble&quot;,
+    &quot;accountId&quot;: &quot;f06d837a-0028-4d9a-94a0-cff5f8c11d61&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -55,21 +88,54 @@
     "Node.js.main.jsx.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "last_opened_file_path": "D:/Facultate/TWA/frontend/public",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Vonavi/Desktop/beer_project/admin/src/assets",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
+    "npm.dev.executor": "Run",
+    "npm.server.executor": "Run",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Vonavi\Desktop\beer_project\admin\src\assets" />
       <recent name="D:\Facultate\TWA\frontend\public" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.server">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/backend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.server" />
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -89,7 +155,9 @@
       <workItem from="1743191686168" duration="2801000" />
       <workItem from="1743195578458" duration="3783000" />
       <workItem from="1745756301059" duration="5901000" />
-      <workItem from="1745765176077" duration="12486000" />
+      <workItem from="1745765176077" duration="12652000" />
+      <workItem from="1745847905687" duration="262000" />
+      <workItem from="1746609551623" duration="14528000" />
     </task>
     <task id="LOCAL-00001" summary="First commit to the new repo">
       <option name="closed" value="true" />

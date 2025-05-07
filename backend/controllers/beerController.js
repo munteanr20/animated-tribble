@@ -21,4 +21,26 @@ const addBeer = async (req, res) => {
     }
 }
 
-export {addBeer};
+
+const listBeer = async (req, res) => {
+    try{
+        const beers = await beerModel.find({});
+        res.json({succes: true, data: beers});
+    } catch(error){
+        console.log(error);
+        res.json({success: false, message: "Failed to list the beer."});
+    }
+}
+
+const removeBeer = async (req, res) => {
+    try{
+        const beer = await beerModel.findById(req.body.id);
+        fs.unlink('uploads/${beer.image}', () => {})
+        await beerModel.findByIdAndDelete(req.body.id);
+        res.json({succes: true, message: "Beer removed successfully."});
+    }catch(error){
+        console.log(error);
+        res.json({success: false, message: "Failed to remove the beer."});
+    }
+}
+export {addBeer, listBeer, removeBeer};

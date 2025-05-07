@@ -1,5 +1,5 @@
 import express from "express";
-import {addBeer} from "../controllers/beerController.js";
+import {addBeer, listBeer, removeBeer} from "../controllers/beerController.js";
 import multer from "multer";
 
 const beerRouter = express.Router();
@@ -13,5 +13,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage: storage});
 beerRouter.post("/add", upload.single("image"), addBeer);
+beerRouter.get("/list", listBeer);
+beerRouter.post("/remove", removeBeer);
 
 export default beerRouter;
