@@ -1,9 +1,11 @@
-import { createContext, useState } from "react";
+import {createContext, useEffect, useState} from "react";
 
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
+  const url = "http://localhost:4000"
+  const [token, setToken] = useState("");
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({
@@ -43,6 +45,11 @@ const StoreContextProvider = ({ children }) => {
     return total;
   };
 
+  useEffect(() => {
+      if(localStorage.getItem("token")) {
+          setToken(localStorage.getItem("token"));
+      }
+  }, [])
 
   return (
       <StoreContext.Provider
@@ -53,6 +60,9 @@ const StoreContextProvider = ({ children }) => {
             removeFromCart,
             getTotalCartAmount,
             clearCart,
+            url,
+              token,
+              setToken,
           }}
       >
         {children}
