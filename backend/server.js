@@ -5,7 +5,8 @@ import beerRouter from "./routes/beerRoute.js";
 import "dotenv/config";
 import userRouter from "./routes/userRoute.js";
 import cartRouter from "./routes/cartRoute.js";
-
+import orderRouter from "./routes/orderRoute.js";
+import { swaggerSpec, swaggerUi } from './swagger.js';
 
 const app = express()
 const port = process.env.PORT || 4000
@@ -19,6 +20,8 @@ app.use("/api/beer", beerRouter)
 app.use("/images", express.static("uploads"))
 app.use("/api/user", userRouter)
 app.use("/api/cart", cartRouter)
+app.use("/api/order", orderRouter)
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.get("/", (req, res) =>{
     res.send("API Working")

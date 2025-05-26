@@ -12,19 +12,35 @@ const ListBeers = () => {
                 const res = await axios.get(`${url}/api/beer/list`);
                 setBeers(res.data.data);
             } catch (err) {
-                console.error('Eroare la încărcarea berilor:', err);
+                console.error('Error fetching beers:', err);
             }
         };
 
         fetchBeers();
     }, []);
 
+    const handleDelete = async (beerId) => {
+        try {
+            await axios.post(`${url}/api/beer/remove`,
+                { beerId },
+                {
+                    headers: {
+                        token: localStorage.getItem("token")
+                    }
+                }
+            );
+            setBeers(prev => prev.filter(b => b._id !== beerId));
+        } catch (err) {
+            console.error("Error deleting beer:", err);
+        }
+    };
+
     return (
         <div className="list-beers-page">
-            <h2>Lista berilor</h2>
+            <h2>Available Beers</h2>
             <div className="beer-list">
                 {beers.length === 0 ? (
-                    <p>Nu există beri în baza de date.</p>
+                    <p>No beers available in the database.</p>
                 ) : (
                     beers.map((beer) => (
                         <div className="beer-card" key={beer._id}>
@@ -32,8 +48,11 @@ const ListBeers = () => {
                             <div className="beer-info">
                                 <h3>{beer.name}</h3>
                                 <p className="desc">{beer.description}</p>
-                                <p><strong>Preț:</strong> {beer.price} RON</p>
-                                <p><strong>Categorie:</strong> {beer.category}</p>
+                                <div className="beer-details">
+                                    <p><strong>Price:</strong> {beer.price} RON</p>
+                                    <p><strong>Category:</strong> {beer.category}</p>
+                                </div>
+                                <button className="delete-button" onClick={() => handleDelete(beer._id)}>Delete</button>
                             </div>
                         </div>
                     ))

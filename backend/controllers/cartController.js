@@ -4,10 +4,10 @@ import userModel from "../models/userModel.js";
 
 const addToCart = async (req, res) => {
     try {
-        const { userId, itemId } = req.body;
-
-        // Găsește utilizatorul după _id
+        const { itemId } = req.body;
+        const userId = req.user.id;
         let userData = await userModel.findById(userId);
+
 
         // Asigură-te că are un cartData inițializat
         if (!userData.cartData) {
@@ -38,8 +38,14 @@ const addToCart = async (req, res) => {
 // ✅ Elimină item din coș
 const removeFromCart = async (req, res) => {
     try {
-        const { userId, itemId } = req.body;
-        let userData = await userModel.findById(userId);
+        const { itemId } = req.body;
+        const userId = req.user.id;
+
+        const userData = await userModel.findById(userId);
+
+        if (!userData) {
+            return res.status(404).json({ success: false, message: "User not found" });
+        }
 
         if (!userData.cartData || !userData.cartData[itemId]) {
             return res.status(400).json({ success: false, message: "Item not found in cart" });
@@ -56,25 +62,27 @@ const removeFromCart = async (req, res) => {
         res.json({ success: true, message: "Item removed from cart" });
 
     } catch (error) {
-        console.log(error);
         res.status(500).json({ success: false, message: "Server error" });
     }
 };
 
-// ✅ Returnează tot coșul userului
 const getCart = async (req, res) => {
     try {
-        const { userId } = req.body;
+        const userId = req.user.id;
+
         const userData = await userModel.findById(userId);
 
         if (!userData) {
             return res.status(404).json({ success: false, message: "User not found" });
         }
 
-        res.json({ success: true, cartData: userData.cartData || {} });
+        // Asigură-te că este obiect, nu altceva
+        if (typeof userData.cartData !== "object") {
+            return res.status(500).json({ success: false, message: "cartData invalid" });
+        }
 
+        res.json({ success: true, cartData: userData.cartData || {} });
     } catch (error) {
-        console.log(error);
         res.status(500).json({ success: false, message: "Server error" });
     }
 };

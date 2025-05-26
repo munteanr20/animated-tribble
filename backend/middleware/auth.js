@@ -1,20 +1,19 @@
 import jwt from "jsonwebtoken"
 
-const authMiddleware = async (req, res, next) => {
+const authMiddleware = (req, res, next) => {
+    const token = req.headers.token;
 
-    const {token} = req.headers;
     if (!token) {
-        return res.json({success: false, message: "Not logged in"});
-    }
-    try{
-        const token_decode = jwt.verify(token, process.env.JWT_SECRET);
-        req.body.userId = token_decode.id;
-        next();
-    } catch (error) {
-        console.log(error);
-        res.json({success: false, message: "Error"});
+        return res.status(401).json({ message: "Token lipsă" });
     }
 
-}
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        req.user = decoded; // aici e cheia — atașezi user-ul pe req
+        next();
+    } catch (err) {
+        return res.status(401).json({ message: "Token invalid" });
+    }
+};
 
 export default authMiddleware;

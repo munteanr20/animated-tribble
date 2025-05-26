@@ -33,14 +33,20 @@ const listBeer = async (req, res) => {
 }
 
 const removeBeer = async (req, res) => {
-    try{
-        const beer = await beerModel.findById(req.body.id);
-        fs.unlink('uploads/${beer.image}', () => {})
-        await beerModel.findByIdAndDelete(req.body.id);
-        res.json({succes: true, message: "Beer removed successfully."});
-    }catch(error){
-        console.log(error);
-        res.json({success: false, message: "Failed to remove the beer."});
+    try {
+        const { beerId } = req.body;
+        if (!beerId) return res.status(400).json({ success: false, message: "Missing beerId" });
+
+        const deleted = await beerModel.findByIdAndDelete(beerId);
+        if (!deleted) {
+            return res.status(404).json({ success: false, message: "Beer not found" });
+        }
+
+        res.json({ success: true, message: "Beer deleted successfully" });
+    } catch (err) {
+        console.error("❌ Error deleting beer:", err);
+        res.status(500).json({ success: false, message: "Server error" });
     }
-}
+};
+
 export {addBeer, listBeer, removeBeer};

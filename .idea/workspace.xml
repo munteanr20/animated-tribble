@@ -4,17 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12291932-7984-4a6f-8cbf-24e927cab678" name="Changes" comment="penultimul commit">
-      <change afterPath="$PROJECT_DIR$/backend/controllers/cardController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/middleware/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/cartRoute.js" afterDir="false" />
+    <list default="true" id="12291932-7984-4a6f-8cbf-24e927cab678" name="Changes" comment="Aproape ultimul commit">
+      <change afterPath="$PROJECT_DIR$/admin/src/pages/Dashboard/DashBoardPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/pages/Dashboard/DashboardPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/orderController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/orderModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/orderRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/swagger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/UserOrder/UserOrders.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/UserOrder/UserOrders.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/pages/List/ListBeer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/pages/List/ListBeer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/pages/List/ListBeers.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/pages/List/ListBeers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/pages/Orders/Orders.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/pages/Orders/Orders.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/beerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/beerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/cartController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/cartController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/beerRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/beerRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/cartRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/cartRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/userRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/LoginPopup/LoginPopup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/LoginPopup/LoginPopup.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AppDownload/AppDownload.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AppDownload/AppDownload.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar/navbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/context/StoreContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/context/StoreContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/PlaceOrder/PlaceOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PlaceOrder/PlaceOrder.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +50,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JSX File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -89,7 +115,10 @@
       <recent name="D:\Facultate\TWA\frontend\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.server">
+  <component name="RunManager" selected="Node.js.App.jsx">
+    <configuration name="App.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/admin/src/App.jsx" working-dir="$PROJECT_DIR$/admin/src">
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/frontend/package.json" />
       <command value="run" />
@@ -112,8 +141,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.server" />
+        <item itemvalue="Node.js.App.jsx" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.server" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +169,9 @@
       <workItem from="1745847905687" duration="262000" />
       <workItem from="1746609551623" duration="14865000" />
       <workItem from="1746796432848" duration="1895000" />
-      <workItem from="1747067842850" duration="6440000" />
+      <workItem from="1747067842850" duration="6544000" />
+      <workItem from="1747594976602" duration="5633000" />
+      <workItem from="1747601178694" duration="26248000" />
     </task>
     <task id="LOCAL-00001" summary="First commit to the new repo">
       <option name="closed" value="true" />
@@ -189,7 +221,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746796992699</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Aproape ultimul commit">
+      <option name="closed" value="true" />
+      <created>1747074563916</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747074563916</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Aproape ultimul commit">
+      <option name="closed" value="true" />
+      <created>1747600609331</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747600609331</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +274,7 @@
     <MESSAGE value="Second commit to the new repo" />
     <MESSAGE value="test test" />
     <MESSAGE value="penultimul commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="penultimul commit" />
+    <MESSAGE value="Aproape ultimul commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aproape ultimul commit" />
   </component>
 </project>

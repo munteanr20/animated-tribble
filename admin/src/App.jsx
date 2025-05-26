@@ -5,6 +5,7 @@ import {Routes, Route} from "react-router-dom";
 import AddBeer from "./pages/Add/AddBeer";
 import ListBeer from "./pages/List/ListBeer.jsx";
 import Orders from "./pages/Orders/Orders.jsx";
+import DashboardPage from "./pages/Dashboard/DashBoardPage.jsx";
 
 const App = () =>{
     return (
@@ -14,6 +15,7 @@ const App = () =>{
             <div className="app-content">
                 <Sidebar />
                 <Routes>
+                    <Route path="/" element={<DashboardPage />} />
                     <Route path="/add" element={<AddBeer />} />
                     <Route path="/list" element={<ListBeer />} />
                     <Route path="/orders" element={<Orders />} />
