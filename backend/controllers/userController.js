@@ -87,5 +87,22 @@ const loginUser = async (req, res) => {
 
 };
 
-// ✅ Export properly
-export {registerUser, loginUser};
+const getUserById = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const user = await userModel.findById(id).select("-password"); // 👈 exclude parola
+
+        if (!user) {
+            return res.status(404).json({ success: false, message: "User not found" });
+        }
+
+        res.json({ success: true, data: user });
+    } catch (err) {
+        console.error("❌ Error fetching user by ID:", err.message);
+        res.status(500).json({ success: false, message: "Server error" });
+    }
+};
+
+
+export {registerUser, loginUser, getUserById};
